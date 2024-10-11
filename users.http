@@ -1,0 +1,32 @@
+@baseUrl=http://localhost:5000
+//posso così creare una variabile se l'indirizzo è
+//il medesimo, per comodità esempio se la porta sarà occupata
+
+
+GET {{baseUrl}}?name=pinca&age=42&ciao
+
+###
+GET {{baseUrl}}/users/10
+
+###
+POST {{baseUrl}}/users
+Content-Type: application/json
+//per scrivere il body in protocollo http, stacco di uno spazio vuoto e si scrive in formato JSON!!!
+//qui sopra headers, anche esempio Authorization:....
+
+{
+    "nome": "Gianfranco",
+    "age": 30
+}
+
+###
+PUT {{baseUrl}}/users/10
+Content-Type: application/json
+
+{
+    "nome": "Pinca",
+    "age": 42
+}
+
+###
+DELETE {{baseUrl}}/users/10
